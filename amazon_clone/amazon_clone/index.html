@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone - Online Shopping</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amazon+Ember:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <img src="https://via.placeholder.com/120x40/232F3E/FFFFFF?text=amazon" alt="Amazon Clone">
+                </div>
+                
+                <div class="delivery-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="location-text">
+                        <span class="deliver-to">Deliver to</span>
+                        <span class="location">New York 10001</span>
+                    </div>
+                </div>
+                
+                <div class="search-container">
+                    <select class="search-category">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Books</option>
+                        <option>Clothing</option>
+                        <option>Home & Garden</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search Amazon Clone">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div class="header-nav">
+                    <div class="nav-item language">
+                        <i class="fas fa-globe"></i>
+                        <span>EN</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                    <div class="nav-item account">
+                        <span class="greeting">Hello, Sign in</span>
+                        <span class="account-lists">Account & Lists</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                    
+                    <div class="nav-item returns">
+                        <span class="returns-text">Returns</span>
+                        <span class="orders-text">& Orders</span>
+                    </div>
+                    
+                    <div class="nav-item cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                        <span class="cart-text">Cart</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-bottom">
+            <div class="container">
+                <nav class="main-nav">
+                    <div class="nav-item all-menu">
+                        <i class="fas fa-bars"></i>
+                        <span>All</span>
+                    </div>
+                    <a href="#" class="nav-link">Today's Deals</a>
+                    <a href="#" class="nav-link">Customer Service</a>
+                    <a href="#" class="nav-link">Registry</a>
+                    <a href="#" class="nav-link">Gift Cards</a>
+                    <a href="#" class="nav-link">Sell</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-carousel">
+                <div class="hero-slide active">
+                    <img src="https://via.placeholder.com/1200x400/FF9900/FFFFFF?text=Holiday+Deals" alt="Holiday Deals">
+                    <div class="hero-content">
+                        <h2>Holiday Deals</h2>
+                        <p>Save up to 50% on electronics, home goods, and more</p>
+                        <button class="cta-button">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Window Display Section -->
+        <section class="window-display">
+            <div class="container">
+                <h2>Recommended for you</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x200/CCCCCC/666666?text=Product+1" alt="Product 1">
+                        <h3>Wireless Headphones</h3>
+                        <div class="price">$99.99</div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(1,234)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x200/CCCCCC/666666?text=Product+2" alt="Product 2">
+                        <h3>Smart Watch</h3>
+                        <div class="price">$199.99</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="review-count">(2,567)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x200/CCCCCC/666666?text=Product+3" alt="Product 3">
+                        <h3>Laptop Stand</h3>
+                        <div class="price">$49.99</div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(890)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/200x200/CCCCCC/666666?text=Product+4" alt="Product 4">
+                        <h3>Coffee Maker</h3>
+                        <div class="price">$79.99</div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="review-count">(456)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="product-categories">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200/FF9900/FFFFFF?text=Electronics" alt="Electronics">
+                        <h3>Electronics</h3>
+                        <p>Phones, laptops, and more</p>
+                    </div>
+                    
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200/FF9900/FFFFFF?text=Fashion" alt="Fashion">
+                        <h3>Fashion</h3>
+                        <p>Clothing, shoes, and accessories</p>
+                    </div>
+                    
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200/FF9900/FFFFFF?text=Home" alt="Home">
+                        <h3>Home & Garden</h3>
+                        <p>Furniture, decor, and tools</p>
+                    </div>
+                    
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/300x200/FF9900/FFFFFF?text=Books" alt="Books">
+                        <h3>Books</h3>
+                        <p>Fiction, non-fiction, and more</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buy Again Section -->
+        <section class="buy-again">
+            <div class="container">
+                <h2>Buy Again</h2>
+                <div class="buy-again-grid">
+                    <div class="buy-again-item">
+                        <img src="https://via.placeholder.com/150x150/CCCCCC/666666?text=Item+1" alt="Previous Purchase">
+                        <h4>Coffee Pods</h4>
+                        <div class="price">$24.99</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    
+                    <div class="buy-again-item">
+                        <img src="https://via.placeholder.com/150x150/CCCCCC/666666?text=Item+2" alt="Previous Purchase">
+                        <h4>Notebook</h4>
+                        <div class="price">$12.99</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                    
+                    <div class="buy-again-item">
+                        <img src="https://via.placeholder.com/150x150/CCCCCC/666666?text=Item+3" alt="Previous Purchase">
+                        <h4>Phone Charger</h4>
+                        <div class="price">$19.99</div>
+                        <button class="add-to-cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals Section -->
+        <section class="deals-section">
+            <div class="container">
+                <h2>Today's Deals</h2>
+                <div class="deals-grid">
+                    <div class="deal-card">
+                        <div class="deal-badge">30% OFF</div>
+                        <img src="https://via.placeholder.com/250x200/FF0000/FFFFFF?text=Deal+1" alt="Deal Product">
+                        <h3>Gaming Mouse</h3>
+                        <div class="price-container">
+                            <span class="original-price">$59.99</span>
+                            <span class="deal-price">$41.99</span>
+                        </div>
+                        <div class="deal-timer">Ends in: 2h 45m</div>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-badge">25% OFF</div>
+                        <img src="https://via.placeholder.com/250x200/FF0000/FFFFFF?text=Deal+2" alt="Deal Product">
+                        <h3>Bluetooth Speaker</h3>
+                        <div class="price-container">
+                            <span class="original-price">$79.99</span>
+                            <span class="deal-price">$59.99</span>
+                        </div>
+                        <div class="deal-timer">Ends in: 5h 12m</div>
+                    </div>
+                    
+                    <div class="deal-card">
+                        <div class="deal-badge">40% OFF</div>
+                        <img src="https://via.placeholder.com/250x200/FF0000/FFFFFF?text=Deal+3" alt="Deal Product">
+                        <h3>Fitness Tracker</h3>
+                        <div class="price-container">
+                            <span class="original-price">$149.99</span>
+                            <span class="deal-price">$89.99</span>
+                        </div>
+                        <div class="deal-timer">Ends in: 1h 23m</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Sell on Amazon Business</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Amazon Payment Products</h4>
+                        <ul>
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Let Us Help You</h4>
+                        <ul>
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/120x40/232F3E/FFFFFF?text=amazon" alt="Amazon Clone">
+                </div>
+                <div class="footer-links">
+                    <a href="#">Conditions of Use</a>
+                    <a href="#">Privacy Notice</a>
+                    <a href="#">Interest-Based Ads</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Amazon Clone. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

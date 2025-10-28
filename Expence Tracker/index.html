@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      width: 420px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: #28a745;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #218838;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+    .delete-btn {
+      background: #dc3545;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .delete-btn:hover {
+      background: #c82333;
+    }
+    .total {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Expense Tracker</h2>
+    
+    <label for="ename">Expense Name</label>
+    <input type="text" id="ename" placeholder="e.g. Groceries">
+    <label for="amount">Amount (₹)</label>
+    <input type="number" id="amount" placeholder="e.g. 500">
+    <label for="desc">Description</label>
+    <input type="text" id="desc" placeholder="e.g. Bought fruits and vegetables">
+    <label for="date">Date</label>
+    <input type="date" id="date">
+    <button onclick="addExpense()">Add Expense</button>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="expenseTable">
+        <!-- Expenses will be listed here -->
+      </tbody>
+    </table>
+    <div class="total" id="totalAmount">Total: ₹0</div>
+  </div>
+  <script>
+    let total = 0;
+
+    function updateTotal() {
+      document.getElementById("totalAmount").innerText = "Total: ₹" + total.toFixed(2);
+    }
+
+    function addExpense() {
+      const name = document.getElementById("ename").value.trim();
+      const amount = parseFloat(document.getElementById("amount").value);
+      const desc = document.getElementById("desc").value.trim();
+      const date = document.getElementById("date").value;
+      if (!name || isNaN(amount) || amount <= 0 || !date) {
+        alert("Please fill all required fields correctly!");
+        return;
+      }
+      // Create new row
+      const table = document.getElementById("expenseTable");
+      const row = table.insertRow();
+      row.insertCell(0).innerText = name;
+      row.insertCell(1).innerText = "₹" + amount.toFixed(2);
+      row.insertCell(2).innerText = desc;
+      row.insertCell(3).innerText = date;
+
+      // Delete button
+      const deleteCell = row.insertCell(4);
+      const deleteBtn = document.createElement("button");
+      deleteBtn.innerText = "Delete";
+      deleteBtn.className = "delete-btn";
+      deleteBtn.onclick = function() {
+        total -= amount;
+        updateTotal();
+        table.deleteRow(row.rowIndex - 1);
+      };
+      deleteCell.appendChild(deleteBtn);
+
+      // Update total
+      total += amount;
+      updateTotal();
+
+      // Clear inputs
+      document.getElementById("ename").value = '';
+      document.getElementById("amount").value = '';
+      document.getElementById("desc").value = '';
+      document.getElementById("date").value = '';
+    }
+  </script>
+</body>
+</html>
